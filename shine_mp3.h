@@ -1,6 +1,9 @@
 #ifndef SHINE_MP3_H
 #define SHINE_MP3_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include <stdint.h>
 
 /* This is the struct used to tell the encoder about the input PCM */
@@ -156,5 +159,7 @@ unsigned char *shine_flush(shine_t s, int *written);
 /* Close an encoder, freeing all associated memory. Encoder handler is not
  * valid after this call. */
 void shine_close(shine_t s);
-
+#ifdef __cplusplus
+}
+#endif
 #endif
